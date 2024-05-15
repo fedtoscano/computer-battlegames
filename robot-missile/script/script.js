@@ -16,7 +16,6 @@ function playAGame(){
             console.log("Fzzz...fzzz...fzz... You have to hurry up!");
         }
 
-
         if(userGuess.toUpperCase().charCodeAt(0)<secretCode.charCodeAt(0)){
             console.log("Higher...");
         }else if(userGuess.toUpperCase().charCodeAt(0)>secretCode.charCodeAt(0)){
