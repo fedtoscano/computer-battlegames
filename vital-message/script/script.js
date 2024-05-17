@@ -4,7 +4,6 @@ function playAGame(){
     secretMessageEl.innerHTML="";
     messageContainer.style.display = "block"
     
-    
     let userDifficulty = Number.parseInt(prompt("Select the difficulty (type 4-10)"),10)
     while(isNaN(userDifficulty)|| userDifficulty<4|| userDifficulty>10){
         userDifficulty = Number.parseInt(prompt("Select the difficulty (type 4-10). Type a valid number!"),10)
@@ -14,7 +13,6 @@ function playAGame(){
     
     setTimeout(() => {
         messageContainer.style.display = "none"
-        // secretMessageEl.remove();
     }, 1500);
     
     setTimeout(() => {
@@ -31,7 +29,6 @@ function playAGame(){
         }    
         return secretWord.join("")
     }
-    
     function relayTheMessage(message, displayEl){
         const userGuess = prompt("Type your guess...")
         if(userGuess.toUpperCase() === message){

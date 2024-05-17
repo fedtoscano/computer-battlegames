@@ -7,27 +7,30 @@
     <title>Vital Message</title>
 </head>
 <body>
-    <h1>VITAL MESSAGE!</h1>
-    <h2>Computer Battlegames - 2</h2>
-    <p>You are a laser communications operator. Your job is to intercept robot messages and relay them to Command HQ. A vital code message is expected.</p>
-    <p>If you relay it correctly, the Robot attack will be crushed, otherwise it's over for the HQ!</p>
 
-    <h3>RULES:</h3>
-    <ul>
-        <li>This game tests your skill at remembering a group of letters</li>
-        <li>The computer will ask you for a difficulty from 4 to 10</li>
-        <li>When you have typed in your answer, letters will appear on the screen</li>
-        <li>Memorize them and then type them into the computer and see if you were right</li>
-        <li>Open up the JS console before starting the game!</li>
-    </ul>
+    <div class="container" style="padding: 2em;">
+        <h1>VITAL MESSAGE!</h1>
+        <h2>Computer Battlegames - 2</h2>
+        <p>You are a laser communications operator. Your job is to intercept robot messages and relay them to Command HQ. A vital code message is expected.</p>
+        <p>If you relay it correctly, the Robot attack will be crushed, otherwise it's over for the HQ!</p>
     
-    <h3>Ready to play the game?</h3>
-    <button id="start-a-game">START TO PLAY</button>
-
-    <div class="message-display" style="position: absolute; top: 200px; padding: 0 1em;left: 200px; width: 800px; height: 200px; background-color: black; color: white; display: none;">
-        <h2 id="secret-message" style="font-size: 5rem; text-align: center;">
-            
-        </h2>
+        <h3>RULES:</h3>
+        <ul>
+            <li>This game tests your skill at remembering a group of letters</li>
+            <li>The computer will ask you for a difficulty from 4 to 10</li>
+            <li>When you have typed in your answer, letters will appear on the screen</li>
+            <li>Memorize them and then type them into the computer and see if you were right</li>
+            <li>Open up the JS console before starting the game!</li>
+        </ul>
+        
+        <h3>Ready to play the game?</h3>
+        <button id="start-a-game">START TO PLAY</button>
+    
+        <div class="message-display" style="position: absolute; top: 200px; left: 150px; width: 600px; height: 200px; background-color: black; color: white; display: none;">
+            <h2 id="secret-message" style="font-size: 5rem; text-align: center;">
+                
+            </h2>
+        </div>
     </div>
     <script src="./script/script.js"></script>
 </body>
