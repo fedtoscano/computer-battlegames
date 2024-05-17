@@ -9,8 +9,19 @@ function playAGame(){
     while(isNaN(userDifficulty)|| userDifficulty<4|| userDifficulty>10){
         userDifficulty = Number.parseInt(prompt("Select the difficulty (type 4-10). Type a valid number!"),10)
     }
-
+    const secretMessage = makeRandomStr(userDifficulty);
+    secretMessageEl.innerHTML = secretMessage;
     
+    setTimeout(() => {
+        messageContainer.style.display = "none"
+        // secretMessageEl.remove();
+    }, 1500);
+    
+    setTimeout(() => {
+        relayTheMessage(secretMessage, secretMessageEl)
+    }, 3000);
+    
+    //? ***FUNCTIONS***
     function makeRandomStr(strLength){
         const secretWord = []
         for(i=0; i<strLength; i++){
@@ -27,26 +38,12 @@ function playAGame(){
             console.log("You won! The message has been relayed")
         }else{
             console.log("You lost! The message was incorrect")
-            console.log(`You typed: ${userGuess}`);
+            console.log(`You typed: ${userGuess.toUpperCase()}`);
             console.log(`The message to relay was: ${message}`)
         }
         displayEl.innerHTML="";
-        
+
     }
-    
-    const secretMessage = makeRandomStr(userDifficulty);
-    secretMessageEl.innerHTML = secretMessage;
-    
-    setTimeout(() => {
-        messageContainer.style.display = "none"
-        secretMessageEl.remove();
-    }, 1500);
-    
-    setTimeout(() => {
-        relayTheMessage(secretMessage, secretMessageEl)
-    }, 3000);
-
-
 }
 
 const startBtn = document.querySelector("button#start-a-game")
